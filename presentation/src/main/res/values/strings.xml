@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Base Project</string>
+
+    <!--Projects-->
+    <string name="activity_title">Project Detail</string>
+    <string name="repository_name">Repository: %s</string>
+    <string name="no_description">No description</string>
+    <string name="no_projects">No Repository was found</string>
+    <string name="click_to_add_repository">Click to set Repository</string>
+
+    <!--User Dialog-->
+    <string name="dialog_user_title">Github Repository</string>
+    <string name="dialog_user_message">Type the Github username</string>
+    <string name="dialog_user_positive_button">Salvar</string>
+    <string name="dialog_user_hint">vagnnermartins</string>
+
+    <!--Project Detail-->
+    <string name="project_detail_full_name">Full Name: %s</string>
+    <string name="project_detail_star_count">Star Count: %s</string>
+    <string name="project_detail_date_created">Created At: %s</string>
+    <string name="project_detail_owner">Owner: %s</string>
+    <string name="project_detail_last_updated">Last Updated: %s</string>
+    <string name="project_detail_language">Last Updated: %s</string>
+
+    <!--Common-->
+    <string name="no_value">...</string>
+    <string name="edit">Edit</string>
+    <string name="no_internet">No internet\nShowing last syncronized result</string>
+    <string name="unknow_error">Ops, There are something wrong with me</string>
+    <string name="lorem_ipsum">Lorem Ipsum is a Fake Text, Lorem Ipsum is a Fake Text, Lorem Ipsum is a Fake Text, Lorem Ipsum is a Fake Text, Lorem Ipsum is a Fake Text, Lorem Ipsum is a Fake Text, Lorem Ipsum is a Fake Text</string>
+</resources>

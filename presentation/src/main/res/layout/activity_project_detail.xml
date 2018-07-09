@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/projectDetailAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:transitionName="projectAvatar" />
+
+        <TextView
+            android:id="@+id/projectDetailName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/default_margin"
+            android:text="Kotlin Project"
+            android:textSize="@dimen/text_super_title"
+            android:transitionName="projectName" />
+
+        <TextView
+            android:id="@+id/projectDetailLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Kotlin Project"
+            android:textStyle="italic"
+            android:transitionName="projectLanguage" />
+
+        <TextView
+            android:id="@+id/projectDetailOwner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/project_detail_owner"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/itemProjectFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            tools:text="@string/project_detail_full_name" />
+
+        <TextView
+            android:id="@+id/itemProjectDateCreated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            tools:text="@string/project_detail_date_created" />
+
+        <TextView
+            android:id="@+id/itemProjectLastUpdated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            tools:text="@string/project_detail_last_updated" />
+
+        <TextView
+            android:id="@+id/itemProjectDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:transitionName="projectDescription"
+            tools:text="@string/lorem_ipsum" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.vagnnermartins.baseproject"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation project(rootProject.ext.modules.domain)
+    implementation project(rootProject.ext.modules.data)
+
+    def presentationDependencies = rootProject.ext.presentationDependencies
+    def presentationTestDependencies = rootProject.ext.presentationTestDependencies
+
+    implementation presentationDependencies.kotlin_stdlib
+    implementation presentationDependencies.anko_commons
+
+    implementation presentationDependencies.appcompat_v7
+    implementation presentationDependencies.design
+    implementation presentationDependencies.cardview_v7
+    implementation presentationDependencies.recyclerview_v7
+    implementation presentationDependencies.constraintLayout
+    implementation presentationDependencies.lifecycleExtensions
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    kapt presentationDependencies.lifecycleCompiler
+    annotationProcessor presentationDependencies.lifecycleCompiler
+
+    implementation presentationDependencies.rxJava
+    implementation presentationDependencies.rxpaper
+
+    implementation presentationDependencies.retrofit
+    implementation presentationDependencies.rxjava_adapter
+    implementation presentationDependencies.moshi_converter
+    implementation presentationDependencies.logging_interceptor
+
+    implementation presentationDependencies.circleImage
+    implementation presentationDependencies.picasso
+
+    implementation presentationDependencies.dagger
+    kapt presentationDependencies.daggerCompiler
+    annotationProcessor presentationDependencies.daggerCompiler
+
+    testImplementation presentationTestDependencies.mockito
+    testImplementation presentationTestDependencies.assertj
+    testImplementation presentationTestDependencies.junit
+    testImplementation presentationTestDependencies.lifecycleTesting
+}

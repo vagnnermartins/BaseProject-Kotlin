@@ -1,0 +1,93 @@
+ext {
+    // Application
+    applicationId = "com.vagnnermartins.baseproject"
+
+    //Android
+    androidBuildToolsVersion = "27.0.2"
+    androidMinSdkVersion = 19
+    androidTargetSdkVersion = 27
+    androidCompileSdkVersion = 27
+    kotlinVersion = '1.2.31'
+    constraintLayoutVersion = '1.1.2'
+    lifeCycleVersion = "1.1.1"
+
+    //Libraries
+    javaxAnnotationVersion = '1.0'
+    javaxInjectVersion = '1'
+    rxJavaVersion = '2.2.0'
+    rxpaperVersion = "1.2.0"
+    retrofitVersion = "2.4.0"
+    daggerVersion = "2.15"
+    moshiVersion = "1.4.0"
+    ankoVersion = "0.10.4"
+    loggingInterceptorVersion = "3.10.0"
+    circleImageVersion = "2.2.0"
+    picasoVersion = "2.71828"
+
+//    Testing
+    jUnitVersion = '4.12'
+    mockitoKotlinVersion = '1.5.0'
+    assertJVersion = '3.8.0'
+
+    modules = [
+            domain: ":domain",
+            data: ":data",
+            presentation: ":presentation"
+    ]
+
+    domainDependencies = [
+            javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+            rxJava:             "io.reactivex.rxjava2:rxkotlin:${rxJavaVersion}"
+    ]
+
+    domainTestDependencies = [
+            junit:              "junit:junit:${jUnitVersion}",
+            mockito:            "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
+            assertj:            "org.assertj:assertj-core:${assertJVersion}"
+    ]
+
+    dataDependencies = [
+            javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+            rxJava:             "io.reactivex.rxjava2:rxkotlin:${rxJavaVersion}",
+            rxpaper:            "com.github.pakoito:RxPaper2:${rxpaperVersion}",
+            moshi:              "com.squareup.moshi:moshi:${moshiVersion}",
+            retrofit:           "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+    ]
+
+    dataTestDependencies = [
+            junit:              "junit:junit:${jUnitVersion}",
+            mockito:            "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
+            assertj:            "org.assertj:assertj-core:${assertJVersion}"
+    ]
+
+    presentationDependencies = [
+            kotlin_stdlib:      "org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}",
+            anko_commons:       "org.jetbrains.anko:anko-commons:${ankoVersion}",
+            appcompat_v7:       "com.android.support:appcompat-v7:${androidBuildToolsVersion}",
+            design:             "com.android.support:design:${androidBuildToolsVersion}",
+            cardview_v7:        "com.android.support:cardview-v7:${androidBuildToolsVersion}",
+            recyclerview_v7:    "com.android.support:recyclerview-v7:${androidBuildToolsVersion}",
+            constraintLayout:   "com.android.support.constraint:constraint-layout:${constraintLayoutVersion}",
+            rxJava:             "io.reactivex.rxjava2:rxkotlin:${rxJavaVersion}",
+            retrofit:           "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            rxjava_adapter:     "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+            rxpaper:            "com.github.pakoito:RxPaper2:${rxpaperVersion}",
+            moshi_converter:    "com.squareup.retrofit2:converter-moshi:${retrofitVersion}",
+            logging_interceptor: "com.squareup.okhttp3:logging-interceptor:${loggingInterceptorVersion}",
+            dagger:             "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
+            lifecycleExtensions: "android.arch.lifecycle:extensions:${lifeCycleVersion}",
+            lifecycleCompiler:  "android.arch.lifecycle:compiler:${lifeCycleVersion}",
+            circleImage:    "de.hdodenhof:circleimageview:${circleImageVersion}",
+            picasso:    "com.squareup.picasso:picasso:${picasoVersion}"
+    ]
+
+    presentationTestDependencies = [
+            junit:              "junit:junit:${jUnitVersion}",
+            assertj:            "org.assertj:assertj-core:${assertJVersion}",
+            mockito:            "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
+            lifecycleTesting: "android.arch.core:core-testing:${lifeCycleVersion}"
+    ]
+}
