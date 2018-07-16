@@ -1,7 +1,7 @@
 package com.vagnnermartins.baseproject.data.mapper
 
 import com.vagnnermartins.baseproject.data.model.ProjectEntity
-import com.vagnnermartins.baseproject.data.teste.ProjectDataFactory
+import com.vagnnermartins.baseproject.data.test.ProjectDataFactory
 import com.vagnnermartins.baseproject.domain.model.ProjectDomain
 import org.junit.Before
 import org.junit.Test

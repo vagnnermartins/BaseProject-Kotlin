@@ -1,4 +1,4 @@
-package com.vagnnermartins.baseproject.data.teste
+package com.vagnnermartins.baseproject.data.test
 
 import com.vagnnermartins.baseproject.data.model.OwnerEntity
 import com.vagnnermartins.baseproject.data.model.ProjectEntity

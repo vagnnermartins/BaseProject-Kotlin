@@ -1,6 +1,6 @@
 package com.vagnnermartins.baseproject.mapper
 
-import com.vagnnermartins.baseproject.data.teste.ProjectDataFactory
+import com.vagnnermartins.baseproject.data.test.ProjectDataFactory
 import com.vagnnermartins.baseproject.domain.model.ProjectDomain
 import com.vagnnermartins.baseproject.model.ProjectItem
 import com.vagnnermartins.baseproject.test.ProjectsPresentationFactory

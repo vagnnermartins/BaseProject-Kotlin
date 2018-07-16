@@ -1,12 +1,13 @@
 package com.vagnnermartins.baseproject
 
 import android.app.Application
-import com.pacoworks.rxpaper2.RxPaperBook
 import android.util.Log
+import com.pacoworks.rxpaper2.RxPaperBook
 import com.vagnnermartins.baseproject.di.AppModule
 import com.vagnnermartins.baseproject.di.DaggerInjector
 import com.vagnnermartins.baseproject.di.Injector
 import io.reactivex.plugins.RxJavaPlugins
+
 
 class App : Application() {
 

@@ -1,6 +1,6 @@
 package com.vagnnermartins.baseproject.mapper
 
-import com.vagnnermartins.baseproject.data.teste.UserDataFactory
+import com.vagnnermartins.baseproject.data.test.UserDataFactory
 import com.vagnnermartins.baseproject.domain.model.UserDomain
 import com.vagnnermartins.baseproject.model.UserItem
 import com.vagnnermartins.baseproject.test.UserPresentationFactory

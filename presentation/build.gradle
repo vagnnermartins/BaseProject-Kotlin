@@ -37,7 +37,6 @@ dependencies {
     implementation presentationDependencies.recyclerview_v7
     implementation presentationDependencies.constraintLayout
     implementation presentationDependencies.lifecycleExtensions
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     kapt presentationDependencies.lifecycleCompiler
     annotationProcessor presentationDependencies.lifecycleCompiler
 

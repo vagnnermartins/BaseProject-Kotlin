@@ -24,7 +24,7 @@ class UserDialogFragment: DialogFragment() {
     companion object {
         private val NAME = "UserDialogFragment_name";
         fun newInstance(name: String?): UserDialogFragment{
-            val args: Bundle = Bundle()
+            val args = Bundle()
             args.putSerializable(NAME, name)
             val fragment = UserDialogFragment()
             fragment.arguments = args

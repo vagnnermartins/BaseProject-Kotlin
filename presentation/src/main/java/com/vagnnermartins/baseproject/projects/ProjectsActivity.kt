@@ -61,14 +61,7 @@ class ProjectsActivity : AppCompatActivity(), UserDialogFragment.OnUserDialogLis
                 }
                 DataState.ERROR -> {
                     swipeRefreshLayout.stopRefreshing()
-                    when (it.message) {
-                        "Key User not found" -> {
-                            showUserDialogFragment(it.data?.name)
-                        }
-                        else -> {
-
-                        }
-                    }
+                    toast(R.string.click_to_add_repository)
                 }
             }
         }
