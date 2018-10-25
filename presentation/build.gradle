@@ -19,6 +19,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
 }
 
 dependencies {
@@ -59,4 +62,9 @@ dependencies {
     testImplementation presentationTestDependencies.assertj
     testImplementation presentationTestDependencies.junit
     testImplementation presentationTestDependencies.lifecycleTesting
+    androidTestImplementation presentationTestDependencies.runner
+    androidTestImplementation presentationTestDependencies.rules
+    androidTestImplementation presentationTestDependencies.espesso
+    implementation presentationTestDependencies.espessoIdling
+    implementation presentationTestDependencies.espessoContrib
 }

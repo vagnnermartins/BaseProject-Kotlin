@@ -3,10 +3,10 @@ ext {
     applicationId = "com.vagnnermartins.baseproject"
 
     //Android
-    androidBuildToolsVersion = "27.0.2"
+    androidBuildToolsVersion = "28.0.0"
     androidMinSdkVersion = 19
-    androidTargetSdkVersion = 27
-    androidCompileSdkVersion = 27
+    androidTargetSdkVersion = 28
+    androidCompileSdkVersion = 28
     kotlinVersion = '1.2.31'
     constraintLayoutVersion = '1.1.2'
     lifeCycleVersion = "1.1.1"
@@ -28,6 +28,8 @@ ext {
     jUnitVersion = '4.12'
     mockitoKotlinVersion = '1.5.0'
     assertJVersion = '3.8.0'
+    androidSupportTestVersion = '1.0.2'
+    espessoVersion = '3.0.2'
 
     modules = [
             domain: ":domain",
@@ -88,6 +90,11 @@ ext {
             junit:              "junit:junit:${jUnitVersion}",
             assertj:            "org.assertj:assertj-core:${assertJVersion}",
             mockito:            "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
-            lifecycleTesting: "android.arch.core:core-testing:${lifeCycleVersion}"
+            lifecycleTesting: "android.arch.core:core-testing:${lifeCycleVersion}",
+            runner: "com.android.support.test:runner:${androidSupportTestVersion}",
+            rules: "com.android.support.test:rules:${androidSupportTestVersion}",
+            espesso: "com.android.support.test.espresso:espresso-core:${espessoVersion}",
+            espessoIdling: "com.android.support.test.espresso:espresso-idling-resource:${espessoVersion}",
+            espessoContrib : "com.android.support.test.espresso:espresso-contrib:${espessoVersion}"
     ]
 }

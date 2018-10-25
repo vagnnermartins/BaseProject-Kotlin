@@ -50,7 +50,7 @@ class ProjectDetailActivity : AppCompatActivity() {
         itemProjectDateCreated.text = String.format(getString(R.string.project_detail_date_created),
                 data?.dateCreated!!.dateFormat("dd/MM/yyyy HH:mm"))
         itemProjectLastUpdated.text = String.format(getString(R.string.project_detail_last_updated),
-                data?.lastUpdated!!.dateFormat("dd/MM/yyyy HH:mm"))
+                data.lastUpdated!!.dateFormat("dd/MM/yyyy HH:mm"))
         itemProjectDescription.text = data.description
     }
 

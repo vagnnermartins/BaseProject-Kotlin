@@ -3,6 +3,7 @@ package com.vagnnermartins.baseproject.projects
 import android.arch.lifecycle.ViewModelProvider
 import android.os.Build
 import android.os.Bundle
+import android.support.test.espresso.idling.CountingIdlingResource
 import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
@@ -20,6 +21,8 @@ import org.jetbrains.anko.toast
 import javax.inject.Inject
 
 class ProjectsActivity : AppCompatActivity(), UserDialogFragment.OnUserDialogListener {
+
+    public var espressoTestIdlingResource = CountingIdlingResource("ProjectsActivity")
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -53,9 +56,9 @@ class ProjectsActivity : AppCompatActivity(), UserDialogFragment.OnUserDialogLis
                     loadValues(it.data)
                     withViewModel<ProjectsViewModel>(viewModelFactory) {
                         swipeRefreshLayout.setOnRefreshListener {
-                            get(app.hasInternet(), it.data?.name)
+                            get(this@ProjectsActivity, app.hasInternet(), it.data?.name)
                         }
-                        get(app.hasInternet(), it.data?.name)
+                        get(this@ProjectsActivity, app.hasInternet(), it.data?.name)
                         observe(projects, ::onGetProjects)
                     }
                 }
@@ -94,7 +97,7 @@ class ProjectsActivity : AppCompatActivity(), UserDialogFragment.OnUserDialogLis
     override fun onUserDialogCallback(user: UserItem?) {
         withViewModel<ProjectsViewModel>(viewModelFactory) {
             loadValues(user)
-            get(true, user?.name)
+            get(this@ProjectsActivity, true, user?.name)
             observe(projects, ::onGetProjects)
         }
     }
