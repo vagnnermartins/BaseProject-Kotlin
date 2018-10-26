@@ -72,8 +72,8 @@ class ExampleInstrumentedTest {
                 .inRoot(isDialog())
                 .check(matches(isDisplayed()))
                 .perform(click())
-        onView(withId(R.id.projectsRecyclerView))
-                .perform(actionOnItemAtPosition<ProjectListAdapter.ViewHolder>(0, click()))
+        onView(withId(R.id.projectsRecyclerView)).perform(actionOnItemAtPosition<ProjectListAdapter.ViewHolder>(0, click()))
+        pressBack()
     }
 
     @Test
@@ -86,5 +86,6 @@ class ExampleInstrumentedTest {
                 .check(matches(isDisplayed()))
                 .perform(click())
         onView(withText(R.string.no_projects)).inRoot(withDecorView(not(`is`(mActivityTestRule.activity.getWindow().getDecorView())))).check(matches(isDisplayed()))
+        pressBack()
     }
 }
